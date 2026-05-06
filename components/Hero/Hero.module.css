@@ -1,58 +1,22 @@
 .hero {
-  position: relative;
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 0 5%;
-  background: #82d8e5; /* Azul do céu do vídeo */
+  background-color: #ffffff;
+  position: relative;
   overflow: hidden;
 }
 
 .container {
-  max-width: 1400px;
-  margin: 0 auto;
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 20px;
-  align-items: center;
-  z-index: 2;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
   width: 100%;
-}
-
-/* Fundo ondulado na esquerda (Desktop) */
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 45%;
-  height: 100%;
-  background-color: #f1f5ec;
-  z-index: 1;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 45%;
-  width: 100px;
-  height: 100%;
-  background-color: #f1f5ec;
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M0,0 C50,0 50,25 100,25 C50,25 50,50 100,50 C50,50 50,75 100,75 C50,75 50,100 100,100 L0,100 Z' fill='black'/%3E%3C/svg%3E");
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M0,0 C50,0 50,25 100,25 C50,25 50,50 100,50 C50,50 50,75 100,75 C50,75 50,100 100,100 L0,100 Z' fill='black'/%3E%3C/svg%3E");
-  mask-size: 100% 200px;
-  -webkit-mask-size: 100% 200px;
-  mask-repeat: repeat-y;
-  -webkit-mask-repeat: repeat-y;
-  z-index: 1;
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  position: relative;
+  justify-content: center;
+  padding: 0 10%;
   z-index: 10;
 }
 
@@ -67,61 +31,58 @@
 }
 
 .title {
-  font-size: clamp(2.5rem, 8vw, 4rem);
-  line-height: 1;
+  font-size: 4rem;
+  font-family: var(--font-baloo);
   color: var(--text-main);
-  margin-bottom: 10px;
+  line-height: 1.1;
+  margin-bottom: 30px;
+}
+
+.line {
+  min-height: 4.5rem;
 }
 
 .highlight {
-  background: linear-gradient(120deg, #FF8742 0%, #FFC021 50%, #FF8742 100%);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shine 3s linear infinite;
-  display: inline-block;
-}
-
-@keyframes shine {
-  to { background-position: 200% center; }
+  color: var(--primary-orange);
 }
 
 .subtitle {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   color: var(--text-light);
+  max-width: 500px;
+  margin-bottom: 45px;
   line-height: 1.6;
-  max-width: 400px;
 }
 
 .primaryBtn {
-  background: linear-gradient(120deg, #FF8742 0%, #FFC021 50%, #FF8742 100%);
-  background-size: 200% auto;
+  background: var(--primary-teal);
   color: white;
-  padding: 18px 45px;
-  border-radius: 100px;
-  font-weight: 700;
+  padding: 20px 50px;
+  border-radius: 50px;
+  font-weight: 800;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 20px 40px rgba(72, 181, 170, 0.2);
+  transition: all 0.3s ease;
   font-size: 1.1rem;
-  box-shadow: 0 15px 30px rgba(255, 135, 66, 0.3);
-  animation: shine 4s linear infinite;
-  width: fit-content;
-  border: none;
-  cursor: pointer;
 }
 
-/* Espaço do Vídeo */
+.primaryBtn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 60px rgba(72, 181, 170, 0.3);
+}
+
+/* ESPAÇO DO VÍDEO */
 .visualSpace {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 55%;
-  height: 100%;
-  z-index: 1;
+  position: relative;
+  height: 100vh;
 }
 
 .videoWrapper {
   width: 100%;
   height: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .heroVideo {
@@ -130,97 +91,92 @@
   object-fit: cover;
 }
 
-.floatingShape1, .floatingShape2 {
+/* Seta Pulsante (Oculta no Desktop) */
+.scrollIndicator {
+  display: none;
   position: absolute;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  z-index: 1;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
 }
 
-.floatingShape1 {
-  width: 300px;
-  height: 300px;
-  top: -100px;
-  left: -100px;
+.arrow {
+  width: 30px;
+  height: 30px;
+  border-right: 5px solid white;
+  border-bottom: 5px solid white;
+  transform: rotate(45deg);
+  animation: pulseArrow 2s infinite;
 }
 
-.floatingShape2 {
-  width: 200px;
-  height: 200px;
-  bottom: -50px;
-  right: 10%;
+@keyframes pulseArrow {
+  0% { transform: translate(0, 0) rotate(45deg); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translate(0, 20px) rotate(45deg); opacity: 0; }
 }
 
-/* MOBILE TRANSFORMATION - ESTILO APP / REELS */
+/* MOBILE TRANSFORMATION */
 @media (max-width: 968px) {
   .hero {
-    min-height: 100vh;
-    padding: 0;
-    align-items: flex-end; /* Conteúdo na base igual apps */
-  }
-
-  .hero::before, .hero::after {
-    display: none;
+    min-height: auto;
   }
 
   .container {
-    grid-template-columns: 1fr;
-    height: 100vh;
-    padding: 0;
-    gap: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
   }
 
   .visualSpace {
+    order: 1; /* Força o Vídeo a ser o PRIMEIRO no mobile */
+    height: 100vh;
     width: 100%;
-    height: 100%;
-    left: 0;
-    z-index: 1;
   }
 
-  /* Overlay Escuro para Legibilidade no Mobile */
-  .visualSpace::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 60%;
-    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
-    z-index: 2;
+  .scrollIndicator {
+    display: block; /* Mostra a seta no mobile */
   }
 
   .content {
-    padding: 40px 25px 80px; /* Padding extra para não bater na base */
-    z-index: 10;
-    color: white;
-    text-align: left;
-    width: 100%;
+    order: 2; /* Força o Texto a ser o SEGUNDO (embaixo) no mobile */
+    padding: 80px 25px 120px;
+    text-align: center;
+    background-color: white;
+    min-height: auto;
   }
 
-  .brandName {
-    font-size: 2.5rem;
-  }
-
-  .babyText {
-    font-size: 1rem;
-    letter-spacing: 5px;
+  .logoWrapper {
+    display: flex;
+    justify-content: center;
   }
 
   .title {
-    color: white;
     font-size: 3.2rem;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  }
+
+  .line {
+    min-height: 3.5rem;
   }
 
   .subtitle {
-    color: rgba(255,255,255,0.9);
-    font-size: 1.1rem;
-    max-width: 100%;
+    font-size: 1.15rem;
+    margin: 0 auto 40px;
   }
 
   .primaryBtn {
     width: 100%;
     padding: 20px;
-    font-size: 1.2rem;
   }
 }
+
+/* Elementos decorativos */
+.floatingShape1, .floatingShape2 {
+  position: absolute;
+  background: rgba(255, 191, 33, 0.05);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.floatingShape1 { width: 300px; height: 300px; top: -100px; left: -100px; }
+.floatingShape2 { width: 200px; height: 200px; bottom: -50px; right: 10%; }

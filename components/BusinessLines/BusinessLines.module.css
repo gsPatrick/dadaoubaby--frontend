@@ -34,7 +34,7 @@
 
 .row {
   display: flex;
-  min-height: 100vh; /* Tela cheia para máximo comprimento */
+  min-height: 80vh;
   width: 100%;
   align-items: center;
 }
@@ -45,9 +45,9 @@
 
 .imageSide {
   flex: 1;
-  height: 100vh;
+  height: 80vh;
   position: relative;
-  overflow: hidden;
+  display: block;
 }
 
 .imageContainer {
@@ -58,7 +58,7 @@
 
 .productImage {
   object-fit: contain;
-  padding: 20px; /* Reduzi o padding para a imagem ganhar mais espaço */
+  padding: 40px;
 }
 
 .contentSide {
@@ -111,48 +111,52 @@
   transition: all 0.3s ease;
 }
 
-.reverse .ctaButton {
-  background: var(--text-main);
-  color: white;
+.dividerWrapper {
+  display: block;
 }
 
-.ctaButton:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
-}
-
-/* MOBILE TRANSFORMATION - REELS STYLE */
+/* MOBILE TRANSFORMATION */
 @media (max-width: 968px) {
   .row {
+    display: flex !important;
     flex-direction: column !important;
-    min-height: auto;
-  }
-
-  .imageSide {
-    width: 100%;
-    height: 100vh; /* Ocupa a tela inteira estilo Reels */
+    min-height: auto !important;
+    height: auto !important;
   }
 
   .contentSide {
-    width: 100%;
-    padding: 60px 25px 100px;
+    width: 100% !important;
+    padding: 60px 25px 30px !important;
     text-align: center;
+    order: 1 !important;
+    display: block !important;
   }
 
-  .contentWrapper {
-    max-width: 100%;
+  .imageSide {
+    width: 100% !important;
+    height: 400px !important; /* Altura fixa garantida */
+    min-height: 400px !important;
+    order: 2 !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    position: relative !important;
+    padding-bottom: 50px;
   }
 
-  .lineTitle {
-    font-size: 3rem;
-  }
-
-  .lineDescription {
-    font-size: 1.1rem;
-  }
-
-  .ctaButton {
+  .imageContainer {
     width: 100%;
-    padding: 20px;
+    height: 100%;
+    position: relative !important;
+    display: block !important;
+  }
+
+  .productImage {
+    padding: 0 !important;
+    object-fit: contain !important;
+  }
+
+  .dividerWrapper {
+    display: none;
   }
 }

@@ -21,7 +21,6 @@ export default function Hero() {
     let timer;
 
     if (!isDeleting) {
-      // TYPING LOGIC
       if (text1.length < current.line1.length) {
         timer = setTimeout(() => setText1(current.line1.slice(0, text1.length + 1)), 50);
       } else if (text2.length < current.line2.length) {
@@ -29,11 +28,9 @@ export default function Hero() {
       } else if (text3.length < current.line3.length) {
         timer = setTimeout(() => setText3(current.line3.slice(0, text3.length + 1)), 50);
       } else {
-        // Finished typing, wait then start deleting
         timer = setTimeout(() => setIsDeleting(true), 15000);
       }
     } else {
-      // DELETING LOGIC
       if (text3.length > 0) {
         timer = setTimeout(() => setText3(text3.slice(0, -1)), 30);
       } else if (text2.length > 0) {
@@ -41,7 +38,6 @@ export default function Hero() {
       } else if (text1.length > 0) {
         timer = setTimeout(() => setText1(text1.slice(0, -1)), 30);
       } else {
-        // Finished deleting, move to next phrase
         setIsDeleting(false);
         setCurrentPhraseIndex((currentPhraseIndex + 1) % phrases.length);
       }
@@ -50,12 +46,13 @@ export default function Hero() {
     return () => clearTimeout(timer);
   }, [text1, text2, text3, isDeleting, currentPhraseIndex]);
 
-  // Determine which line gets the highlight based on the phrase
   const isSecondPhrase = currentPhraseIndex === 1;
 
   return (
     <section className={styles.hero}>
       <div className={styles.container}>
+        
+        {/* LADO DO CONTEÚDO (Desktop: Esquerda | Mobile: Embaixo) */}
         <div className={styles.content}>
           <div className={styles.logoWrapper}>
             <Image 
@@ -85,7 +82,8 @@ export default function Hero() {
             </a>
           </div>
         </div>
-        
+
+        {/* LADO VISUAL (Desktop: Direita | Mobile: Topo 100vh) */}
         <div className={styles.visualSpace}>
           <div className={styles.videoWrapper}>
             <video 
@@ -100,11 +98,15 @@ export default function Hero() {
               <source src="/videos/urso.mp4" type="video/mp4" />
               Seu navegador não suporta vídeos.
             </video>
+            
+            <div className={styles.scrollIndicator}>
+              <div className={styles.arrow}></div>
+            </div>
           </div>
         </div>
+
       </div>
       
-      {/* Elementos Decorativos de Fundo */}
       <div className={styles.floatingShape1}></div>
       <div className={styles.floatingShape2}></div>
     </section>

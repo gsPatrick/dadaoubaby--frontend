@@ -1,10 +1,10 @@
-import Image from 'next/image';
 import styles from './MascotSection.module.css';
 
 export default function MascotSection() {
   return (
     <section className={styles.mascotSection}>
       <div className={styles.container}>
+        {/* TEXTO (Sempre primeiro no mobile) */}
         <div className={styles.content}>
           <span className={styles.label}>O Coração da Marca</span>
           <h2 className={styles.title}>Conheça o <span className={styles.highlight}>Dadaou</span></h2>
@@ -27,23 +27,20 @@ export default function MascotSection() {
           </div>
         </div>
 
+        {/* IMAGEM (Embaixo no mobile, grande e vertical) */}
         <div className={styles.visual}>
           <div className={styles.imageBox}>
-            <Image 
+            <img 
               src="/4ce964a8-0f89-49a3-aee5-446707345caa.jpeg" 
               alt="Mascote Dadaou Segurando Nuvem" 
-              width={800} 
-              height={900} 
               className={styles.mascotImage}
-              priority
+              style={{ width: '100%', height: '100%', objectFit: 'contain' }}
             />
             
-            {/* Céu de Nuvens (Mais elementos) */}
+            {/* Elementos Decorativos */}
             <div className={`${styles.cloud} ${styles.cloud1}`}>☁️</div>
             <div className={`${styles.cloud} ${styles.cloud2}`}>☁️</div>
             <div className={`${styles.cloud} ${styles.cloud3}`}>☁️</div>
-            <div className={`${styles.cloud} ${styles.cloud4}`}>☁️</div>
-            <div className={`${styles.cloud} ${styles.cloud5}`}>☁️</div>
           </div>
         </div>
       </div>

@@ -1,12 +1,10 @@
 .mascotSection {
   padding: 120px 5%;
-  /* Gradiente mais quente integrando as cores da marca */
   background: linear-gradient(135deg, #ffffff 0%, #fff9e6 50%, #fff0e6 100%);
   overflow: hidden;
   position: relative;
 }
 
-/* Formas decorativas coloridas de fundo */
 .mascotSection::before {
   content: "";
   position: absolute;
@@ -112,7 +110,6 @@
   align-items: center;
 }
 
-/* Brilho atrás da imagem (Sun Glow) */
 .imageBox::before {
   content: "";
   position: absolute;
@@ -126,16 +123,15 @@
   width: 100%;
   height: auto;
   border-radius: 80px;
-  box-shadow: 0 50px 120px rgba(255, 135, 66, 0.15); /* Sombra levemente alaranjada */
+  box-shadow: 0 50px 120px rgba(255, 135, 66, 0.15);
   position: relative;
   z-index: 2;
 }
 
-/* Céu de Nuvens Adensado */
 .cloud {
   position: absolute;
   font-size: 4rem;
-  opacity: 0.6; /* Aumentei um pouco a opacidade */
+  opacity: 0.6;
   z-index: 5;
   filter: drop-shadow(0 5px 15px rgba(0,0,0,0.05));
 }
@@ -143,22 +139,56 @@
 .cloud1 { top: -5%; left: -20px; font-size: 5rem; color: #ffffff; }
 .cloud2 { bottom: 5%; right: -30px; font-size: 4.5rem; color: #ffffff; }
 .cloud3 { top: 40%; left: -60px; font-size: 3rem; opacity: 0.3; color: #fff; }
-.cloud4 { bottom: 40%; right: -80px; font-size: 3.5rem; opacity: 0.4; color: #fff; }
-.cloud5 { top: 15%; right: 10%; font-size: 2.5rem; opacity: 0.3; color: #fff; }
 
-/* MOBILE */
+/* MOBILE TRANSFORMATION */
 @media (max-width: 968px) {
   .mascotSection {
-    padding: 80px 25px;
+    padding: 80px 0 0 0; /* Removi padding lateral para a imagem encostar se necessário */
   }
 
   .container {
-    grid-template-columns: 1fr;
-    gap: 60px;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 40px;
     text-align: center;
+  }
+
+  .content {
+    order: 1 !important;
+    padding: 0 25px;
   }
   
   .title {
-    font-size: 3.2rem;
+    font-size: 3rem;
+  }
+
+  .visual {
+    order: 2 !important;
+    width: 100% !important;
+    height: 80vh !important; /* Força a altura vertical imponente */
+    min-height: 500px !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 30px;
+  }
+  
+  .imageBox {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .mascotImage {
+    border-radius: 0; /* No mobile, preenchendo a tela, fica melhor sem bordas arredondadas ou menores */
+    object-fit: cover !important; /* PREENCHE A ALTURA TOTAL */
+    height: 100% !important;
+    width: 100% !important;
+    display: block !important;
+  }
+
+  .cloud {
+    display: none; /* Remove nuvens no mobile para focar só na imagem gigante */
   }
 }
