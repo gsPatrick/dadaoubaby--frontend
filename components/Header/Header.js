@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Header.module.css';
 
 export default function Header() {
@@ -22,15 +23,14 @@ export default function Header() {
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
-          <div className={styles.brandName}>
-            <span className={styles.color1}>D</span>
-            <span className={styles.color2}>A</span>
-            <span className={styles.color3}>D</span>
-            <span className={styles.color1}>A</span>
-            <span className={styles.color2}>O</span>
-            <span className={styles.color3}>U</span>
-            <div className={styles.babyText}>BABY</div>
-          </div>
+          <Image 
+            src="/logo/logotexto.png" 
+            alt="Dadaou Baby" 
+            width={180} 
+            height={60} 
+            className={styles.logoImage}
+            priority
+          />
         </Link>
 
         {/* Desktop Nav */}

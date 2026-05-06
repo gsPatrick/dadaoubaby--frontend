@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -7,15 +8,13 @@ export default function Footer() {
       <div className={styles.container}>
         <div className={styles.top}>
           <div className={styles.brand}>
-            <div className={styles.brandName}>
-              <span className={styles.color1}>D</span>
-              <span className={styles.color2}>A</span>
-              <span className={styles.color3}>D</span>
-              <span className={styles.color1}>A</span>
-              <span className={styles.color2}>O</span>
-              <span className={styles.color3}>U</span>
-              <div className={styles.babyText}>BABY</div>
-            </div>
+            <Image 
+              src="/logo/logotexto.png" 
+              alt="Dadaou Baby" 
+              width={160} 
+              height={50} 
+              className={styles.footerLogo}
+            />
             <p className={styles.description}>
               Desde 2006, unindo tradição e inovação para vestir o futuro com amor e carinho.
             </p>

@@ -56,29 +56,14 @@
   z-index: 10;
 }
 
-.brandName {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  font-family: var(--font-baloo);
-  font-weight: 900;
-  font-size: 4rem;
-  line-height: 0.8;
-  letter-spacing: -1px;
+.logoWrapper {
+  margin-bottom: 20px;
 }
 
-.color1 { color: #fec024; }
-.color2 { color: #ff8943; }
-.color3 { color: #4ab5ab; }
-
-.babyText {
-  width: 100%;
-  font-size: 1.5rem;
-  color: #fcc026;
-  letter-spacing: 8px;
-  margin-top: 5px;
-  text-transform: uppercase;
-  font-weight: 800;
+.heroLogo {
+  width: auto;
+  height: 90px;
+  object-fit: contain;
 }
 
 .title {

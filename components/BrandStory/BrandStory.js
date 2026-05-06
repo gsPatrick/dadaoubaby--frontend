@@ -54,7 +54,7 @@ export default function BrandStory() {
               <Counter end={20} suffix="+" /> Anos
             </div>
             <Image 
-              src="/logo/logo.png" 
+              src="/logo/logoalternativa.png" 
               alt="Dadaou Baby Logo" 
               width={600} 
               height={600} 

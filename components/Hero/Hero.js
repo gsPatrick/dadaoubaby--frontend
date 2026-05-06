@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import styles from './Hero.module.css';
 
 export default function Hero() {
@@ -56,14 +57,15 @@ export default function Hero() {
     <section className={styles.hero}>
       <div className={styles.container}>
         <div className={styles.content}>
-          <div className={styles.brandName}>
-            <span className={styles.color1}>D</span>
-            <span className={styles.color1}>A</span>
-            <span className={styles.color2}>D</span>
-            <span className={styles.color2}>A</span>
-            <span className={styles.color3}>O</span>
-            <span className={styles.color3}>U</span>
-            <div className={styles.babyText}>BABY</div>
+          <div className={styles.logoWrapper}>
+            <Image 
+              src="/logo/logotexto.png" 
+              alt="Dadaou Baby" 
+              width={400} 
+              height={120} 
+              className={styles.heroLogo}
+              priority
+            />
           </div>
           <h1 className={styles.title}>
             <div className={styles.line}>{text1}</div>
@@ -95,7 +97,7 @@ export default function Hero() {
               className={styles.heroVideo}
               poster="/urso_poster_hero_1778070167732.png"
             >
-              <source src="/videos/urso-herosection-fundoazul.mp4" type="video/mp4" />
+              <source src="/videos/urso.mp4" type="video/mp4" />
               Seu navegador não suporta vídeos.
             </video>
           </div>

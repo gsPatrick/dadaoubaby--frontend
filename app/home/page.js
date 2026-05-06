@@ -6,6 +6,7 @@ import BusinessLines from '../../components/BusinessLines/BusinessLines';
 import Logistics from '../../components/Logistics/Logistics';
 import PartnerJourney from '../../components/PartnerJourney/PartnerJourney';
 import Differentials from '../../components/Differentials/Differentials';
+import MascotSection from '../../components/MascotSection/MascotSection';
 import CTA from '../../components/CTA/CTA';
 
 export default function HomePage() {
@@ -18,6 +19,7 @@ export default function HomePage() {
       <Differentials />
       
       <BusinessLines />
+      <MascotSection />
       <Logistics />
       <PartnerJourney />
       <CTA />

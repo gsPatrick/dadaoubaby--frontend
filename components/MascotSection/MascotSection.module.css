@@ -1,0 +1,164 @@
+.mascotSection {
+  padding: 120px 5%;
+  /* Gradiente mais quente integrando as cores da marca */
+  background: linear-gradient(135deg, #ffffff 0%, #fff9e6 50%, #fff0e6 100%);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Formas decorativas coloridas de fundo */
+.mascotSection::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  right: -5%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 191, 33, 0.15) 0%, rgba(255, 191, 33, 0) 70%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.mascotSection::after {
+  content: "";
+  position: absolute;
+  bottom: -5%;
+  left: -5%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(255, 135, 66, 0.1) 0%, rgba(255, 135, 66, 0) 70%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 80px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.label {
+  display: inline-block;
+  color: var(--primary-teal);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 4.5rem;
+  font-family: var(--font-baloo);
+  color: var(--text-main);
+  margin-bottom: 25px;
+  line-height: 1.1;
+}
+
+.highlight {
+  color: var(--primary-orange);
+}
+
+.description {
+  font-size: 1.3rem;
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.traits {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.trait {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary-orange);
+  border-radius: 50%;
+}
+
+.trait p {
+  font-weight: 700;
+  color: var(--text-main);
+  font-size: 1.2rem;
+}
+
+/* Área do Mascote */
+.visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.imageBox {
+  width: 100%;
+  max-width: 750px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Brilho atrás da imagem (Sun Glow) */
+.imageBox::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(255, 191, 33, 0.25) 0%, rgba(255, 191, 33, 0) 60%);
+  z-index: 1;
+}
+
+.mascotImage {
+  width: 100%;
+  height: auto;
+  border-radius: 80px;
+  box-shadow: 0 50px 120px rgba(255, 135, 66, 0.15); /* Sombra levemente alaranjada */
+  position: relative;
+  z-index: 2;
+}
+
+/* Céu de Nuvens Adensado */
+.cloud {
+  position: absolute;
+  font-size: 4rem;
+  opacity: 0.6; /* Aumentei um pouco a opacidade */
+  z-index: 5;
+  filter: drop-shadow(0 5px 15px rgba(0,0,0,0.05));
+}
+
+.cloud1 { top: -5%; left: -20px; font-size: 5rem; color: #ffffff; }
+.cloud2 { bottom: 5%; right: -30px; font-size: 4.5rem; color: #ffffff; }
+.cloud3 { top: 40%; left: -60px; font-size: 3rem; opacity: 0.3; color: #fff; }
+.cloud4 { bottom: 40%; right: -80px; font-size: 3.5rem; opacity: 0.4; color: #fff; }
+.cloud5 { top: 15%; right: 10%; font-size: 2.5rem; opacity: 0.3; color: #fff; }
+
+/* MOBILE */
+@media (max-width: 968px) {
+  .mascotSection {
+    padding: 80px 25px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 3.2rem;
+  }
+}
