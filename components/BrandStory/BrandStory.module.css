@@ -1,0 +1,125 @@
+.brandStory {
+  padding: 100px 5%;
+  background-color: #ffbf21;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Elementos decorativos */
+.shape1 {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.logoImage {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.1));
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.content {
+  color: white;
+  z-index: 2;
+}
+
+.title {
+  font-size: 3rem;
+  font-family: var(--font-baloo);
+  margin-bottom: 25px;
+  line-height: 1.1;
+}
+
+.text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  opacity: 0.95;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.statItem h4 {
+  font-size: 2.8rem;
+  font-family: var(--font-baloo);
+  margin-bottom: 5px;
+}
+
+.statItem p {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+/* MOBILE TRANSFORMATION */
+@media (max-width: 968px) {
+  .brandStory {
+    padding: 80px 25px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    text-align: center;
+  }
+
+  .logoImage {
+    max-width: 250px;
+  }
+
+  .title {
+    font-size: 2.8rem;
+  }
+
+  .text {
+    font-size: 1.1rem;
+    text-align: left; /* Melhor legibilidade para textos longos */
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 30px;
+  }
+
+  .statItem h4 {
+    font-size: 3.5rem;
+  }
+}
