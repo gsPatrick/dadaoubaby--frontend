@@ -78,8 +78,8 @@ export default function Hero() {
             Roupas e acessórios pensados para transformar cada momento em uma memória mágica. Qualidade premium para os pequenos exploradores.
           </p>
           <div className={styles.actions}>
-            <a href="https://wa.me/seunumeroaqui" target="_blank" rel="noopener noreferrer" className={styles.primaryBtn}>
-              Falar no WhatsApp
+            <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" className={styles.primaryBtn}>
+              Quero ser Revendedor
             </a>
           </div>
         </div>
@@ -91,7 +91,9 @@ export default function Hero() {
               muted 
               loop 
               playsInline 
+              preload="auto"
               className={styles.heroVideo}
+              poster="/urso_poster_hero_1778070167732.png"
             >
               <source src="/videos/urso-herosection-fundoazul.mp4" type="video/mp4" />
               Seu navegador não suporta vídeos.
