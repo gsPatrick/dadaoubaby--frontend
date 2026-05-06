@@ -32,21 +32,31 @@ export default function Differentials() {
           <path d="M50 75L45.5 70.9C29.4 56.3 18.8 46.7 18.8 34.9C18.8 25.3 26.3 17.8 35.9 17.8C41.3 17.8 46.5 20.3 50 24.3C53.5 20.3 58.7 17.8 64.1 17.8C73.7 17.8 81.2 25.3 81.2 34.9C81.2 46.7 70.6 56.3 54.5 70.9L50 75Z" fill="#FF8742" />
         </svg>
       )
+    },
+    {
+      title: "Logística Ágil",
+      text: "Entrega rápida para que você nunca perca uma venda.",
+      icon: (
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="45" fill="#48B5AA" fillOpacity="0.1" />
+          <path d="M20 50H40M30 30L45 50L30 70M60 50L80 50" stroke="#48B5AA" strokeWidth="5" strokeLinecap="round" />
+        </svg>
+      )
     }
   ];
 
   return (
     <section className={styles.differentials}>
       <div className={styles.container}>
-        {items.map((item, index) => (
-          <div key={index} className={styles.item}>
-            <div className={styles.iconWrapper}>{item.icon}</div>
-            <div className={styles.info}>
+        <div className={styles.grid}>
+          {items.map((item, index) => (
+            <div key={index} className={styles.card}>
+              <div className={styles.iconBox}>{item.icon}</div>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

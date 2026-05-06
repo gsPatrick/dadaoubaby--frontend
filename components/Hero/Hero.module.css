@@ -145,6 +145,27 @@
   object-fit: cover;
 }
 
+.floatingShape1, .floatingShape2 {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.floatingShape1 {
+  width: 300px;
+  height: 300px;
+  top: -100px;
+  left: -100px;
+}
+
+.floatingShape2 {
+  width: 200px;
+  height: 200px;
+  bottom: -50px;
+  right: 10%;
+}
+
 /* MOBILE TRANSFORMATION - ESTILO APP / REELS */
 @media (max-width: 968px) {
   .hero {

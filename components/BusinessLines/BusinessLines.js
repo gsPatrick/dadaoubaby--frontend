@@ -6,60 +6,55 @@ export default function BusinessLines() {
     {
       id: 'giro',
       title: 'Linha de Giro',
-      subtitle: 'Rentabilidade e Volume',
-      description: 'O motor das vendas para o lojista. Peças com alto giro e preços competitivos.',
+      subtitle: 'RENTABILIDADE E VOLUME',
       image: '/linha_giro_conceptual_1778077066779.png',
     },
     {
       id: 'premium',
       title: 'Linha Premium',
-      subtitle: 'Exclusividade e Requinte',
-      description: 'Materiais nobres e design exclusivo que eleva o ticket médio.',
+      subtitle: 'EXCLUSIVIDADE E REQUINTE',
       image: '/linha_premium_conceptual_1778077097451.png',
     }
   ];
 
   return (
-    <section className={styles.businessLines}>
+    <section className={styles.businessLines} id="linhas">
       <div className={styles.container}>
         <div className={styles.header}>
-          <h2 className={styles.title}>Segmentação de <span className={styles.highlight}>Linhas</span></h2>
-          <p className={styles.subtitle}>Soluções estratégicas para diferentes perfis de lojistas</p>
+          <span className={styles.label}>Segmentação Estratégica</span>
+          <h2 className={styles.title}>Nossas <span className={styles.highlight}>Linhas</span></h2>
         </div>
 
         <div className={styles.grid}>
           {lines.map((line) => (
             <div key={line.id} className={styles.badge}>
-              {/* Topo do Crachá com a Logo */}
-              <div className={styles.badgeHeader}>
+              {/* Parte Superior do Crachá (Creme) */}
+              <div className={styles.badgeTop}>
                 <div className={styles.slot}></div>
                 <div className={styles.logoBox}>
-                   <Image src="/logo/logo.png" alt="Logo" width={100} height={40} className={styles.logoSmall} />
+                  <Image src="/logo/logo.png" alt="Dadaou Baby" width={140} height={50} className={styles.logo} />
                 </div>
-              </div>
-
-              {/* Corpo do Crachá com o Produto em Círculo */}
-              <div className={styles.badgeBody}>
-                <div className={styles.splitBackground}></div>
-                <div className={styles.yellowStripe}></div>
                 
-                <div className={styles.productCircle}>
+                {/* Círculo com a imagem do produto */}
+                <div className={styles.photoCircle}>
                   <Image 
                     src={line.image} 
                     alt={line.title} 
                     fill
-                    style={{ objectFit: 'cover' }}
+                    className={styles.productImage}
                   />
                 </div>
               </div>
 
-              {/* Rodapé do Crachá (Card de Informação) */}
-              <div className={styles.badgeFooter}>
+              {/* Parte Inferior do Crachá (Verdinho/Teal) */}
+              <div className={styles.badgeBottom}>
+                <div className={styles.yellowStripe}></div>
+                
+                {/* Card de Nome (Branco) */}
                 <div className={styles.infoCard}>
-                  <h3>{line.title}</h3>
-                  <p>{line.subtitle}</p>
+                  <h3 className={styles.cardTitle}>{line.title}</h3>
+                  <p className={styles.cardSubtitle}>{line.subtitle}</p>
                 </div>
-                <button className={styles.cta}>Ver Detalhes</button>
               </div>
             </div>
           ))}

@@ -4,19 +4,28 @@ export default function CTA() {
   return (
     <section className={styles.cta}>
       <div className={styles.container}>
-        <div className={styles.content}>
-          <h2 className={styles.title}>Pronto para dar o melhor para o seu <span className={styles.highlight}>bebê</span>?</h2>
-          <p className={styles.subtitle}>
-            Nossa equipe de especialistas está pronta para ajudar você a escolher as melhores peças. Atendimento personalizado via WhatsApp.
-          </p>
-          <a href="https://wa.me/seunumeroaqui" target="_blank" rel="noopener noreferrer" className={styles.ctaBtn}>
-            Chamar no WhatsApp agora
-          </a>
+        <div className={styles.powerBox}>
+          <div className={styles.content}>
+            <span className={styles.label}>Oportunidade de Negócio</span>
+            <h2 className={styles.title}>
+              Transforme sua loja com a <br />
+              <span className={styles.highlight}>Dadaou Baby</span>
+            </h2>
+            <p className={styles.text}>
+              Junte-se a centenas de revendedores que já lucram com a marca que é sinônimo de amor e qualidade. Temos condições exclusivas para atacado.
+            </p>
+            <div className={styles.actions}>
+              <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" className={styles.button}>
+                Quero Revender Agora
+              </a>
+              <p className={styles.smallNote}>Atendimento rápido via WhatsApp</p>
+            </div>
+          </div>
+          
+          {/* Elementos de fundo no box */}
+          <div className={styles.decor1}></div>
+          <div className={styles.decor2}></div>
         </div>
-        
-        {/* Elementos Decorativos de Fundo */}
-        <div className={styles.circle1}></div>
-        <div className={styles.circle2}></div>
       </div>
     </section>
   );
