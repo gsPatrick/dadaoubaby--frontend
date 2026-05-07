@@ -56,7 +56,7 @@ export default function PartnerJourney() {
     {
       id: 3,
       title: 'Acesso Exclusivo',
-      description: 'Receba nossas tabelas de atacado e conheça em detalhes as linhas de Giro e Premium.',
+      description: 'Receba nossas tabelas de atacado e conheça em detalhes as Linha Dadaou Baby — O Coração da sua Loja e Linha Dadaou Baby PREMIUM — A Excelência ao seu Alcance',
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />

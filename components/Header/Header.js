@@ -36,8 +36,8 @@ export default function Header() {
         {/* Desktop Nav */}
         <nav className={styles.nav}>
           <Link href="#home">Início</Link>
-          <Link href="#historia">História</Link>
-          <Link href="#linhas">Linhas</Link>
+          <Link href="#historia">Sobre Nós</Link>
+          <Link href="#linhas">Nossas Linhas</Link>
           <Link href="#contato" className={styles.cta}>Seja um Revendedor</Link>
         </nav>
 
@@ -56,7 +56,7 @@ export default function Header() {
       <div className={`${styles.menuOverlay} ${menuOpen ? styles.menuVisible : ''}`}>
         <nav className={styles.mobileNav}>
           <Link href="#home" onClick={toggleMenu}>Início</Link>
-          <Link href="#historia" onClick={toggleMenu}>Nossa História</Link>
+          <Link href="#historia" onClick={toggleMenu}>sobre Nós</Link>
           <Link href="#linhas" onClick={toggleMenu}>Linhas de Negócio</Link>
           <Link href="#logistica" onClick={toggleMenu}>Logística</Link>
           <Link href="#contato" className={styles.mobileMenuCta} onClick={toggleMenu}>Seja um Revendedor</Link>

@@ -4,7 +4,7 @@ export default function Differentials() {
   const items = [
     {
       title: "Qualidade Premium",
-      text: "Materiais selecionados para a pele sensível do seu bebê.",
+      text: "Materiais de alto padrão e acabamento rigoroso para garantir a durabilidade e a confiança que o seu cliente exige.",
       icon: (
         <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="50" cy="50" r="45" fill="#48B5AA" fillOpacity="0.1" />
@@ -14,7 +14,7 @@ export default function Differentials() {
     },
     {
       title: "Preço Justo",
-      text: "O melhor custo-benefício para o enxoval completo.",
+      text: "Materiais de alto padrão e acabamento rigoroso para garantir a durabilidade e a confiança que o seu cliente exige.",
       icon: (
         <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="50" cy="50" r="45" fill="#FFC021" fillOpacity="0.1" />
@@ -25,7 +25,7 @@ export default function Differentials() {
     },
     {
       title: "Amor e Carinho",
-      text: "Cada peça é embalada com afeto e dedicação.",
+      text: "Cada peça é produzida com afeto e dedicação, mantendo a essência humana que faz da Dadaou uma marca amada pelas famílias.",
       icon: (
         <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="50" cy="50" r="45" fill="#FF8742" fillOpacity="0.1" />
@@ -35,7 +35,7 @@ export default function Differentials() {
     },
     {
       title: "Logística Ágil",
-      text: "Entrega rápida para que você nunca perca uma venda.",
+      text: "Envio rápido e seguro para garantir que sua loja esteja sempre abastecida com o que há de melhor no mercado.",
       icon: (
         <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="50" cy="50" r="45" fill="#48B5AA" fillOpacity="0.1" />

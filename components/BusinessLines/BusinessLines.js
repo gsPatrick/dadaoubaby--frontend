@@ -5,9 +5,9 @@ export default function BusinessLines() {
   const lines = [
     {
       id: 'giro',
-      title: 'Linha de Giro',
-      subtitle: 'Rentabilidade e Volume',
-      description: 'O motor das vendas para o lojista. Peças com alto giro, preços competitivos e a qualidade que o mercado já confia. Ideal para quem busca volume e giro rápido de estoque.',
+      title: 'Linha Dadaou Baby — O Coração da sua Loja',
+      subtitle: 'Onde a economia inteligente encontra o carinho que o bebê precisa.',
+      description: 'O motor das vendas para o lojista. Peças com alto giro, preços competitivos e a qualidade que o mercado já confia desde 2006. Ideal para quem busca volume e quer oferecer o melhor custo-benefício para as famílias no dia a dia.',
       image: '/linha/urso.jpeg',
       color: '#fdf8e9', // Creme
       textColor: 'var(--text-main)',
@@ -15,9 +15,9 @@ export default function BusinessLines() {
     },
     {
       id: 'premium',
-      title: 'Linha Premium',
-      subtitle: 'Exclusividade e Requinte',
-      description: 'Materiais nobres, acabamento impecável e design exclusivo. A linha premium é pensada para elevar o ticket médio da sua loja e encantar os clientes mais exigentes.',
+      title: 'Linha Dadaou Baby PREMIUM — A Excelência ao seu Alcance',
+      subtitle: 'Matérias-primas nobres e acabamento superior, com o preço acessível que só a Dadaou oferece',
+      description: 'A nossa joia da coroa. Esta linha prova que sofisticação não precisa custar uma fortuna. Utilizamos materiais selecionados e um acabamento rigoroso para entregar um produto visivelmente superior, ideal para elevar o nível da sua vitrine. Mesmo com padrão de elite, mantemos o compromisso com o preço justo, garantindo que você ofereça exclusividade e requinte com um valor surpreendentemente acessível.',
       image: '/linha/ursopremium.jpeg',
       color: '#48b5aa', // Verdinho/Teal
       textColor: '#ffffff',

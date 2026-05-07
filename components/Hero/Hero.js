@@ -12,7 +12,7 @@ export default function Hero() {
   const [isDeleting, setIsDeleting] = useState(false);
 
   const phrases = [
-    { line1: "Conforto que", line2: "parece um ", line3: "abraço" },
+    { line1: "Qualidade que encanta", line2: "preço que ", line3: "surpreende" },
     { line1: "Muito", line2: "Amor", line3: "envolvido" }
   ];
 
@@ -74,7 +74,7 @@ export default function Hero() {
             </div>
           </h1>
           <p className={styles.subtitle}>
-            Roupas e acessórios pensados para transformar cada momento em uma memória mágica. Qualidade premium para os pequenos exploradores.
+            Do primeiro lookinho aos acessórios essenciais: Tudo o que o seu bebê precisa em um só lugar. Qualidade premium para os pequenos exploradores.
           </p>
           <div className={styles.actions}>
             <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" className={styles.primaryBtn}>

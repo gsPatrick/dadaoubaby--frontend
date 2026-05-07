@@ -24,7 +24,7 @@ export default function Footer() {
             <h4>Navegação</h4>
             <Link href="#home">Início</Link>
             <Link href="#historia">Nossa História</Link>
-            <Link href="#linhas">Linhas de Negócio</Link>
+            <Link href="#linhas">​Nossas Linhas</Link>
             <Link href="#logistica">Logística</Link>
           </div>
 
