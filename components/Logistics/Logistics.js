@@ -9,7 +9,7 @@ export default function Logistics() {
           <span className={styles.label}>Vantagem Logística B2B</span>
           <h2 className={styles.title}>De Belém para o <span className={styles.highlight}>Brasil</span></h2>
           <p className={styles.text}>
-            Sabemos que a eficiência no frete é vital para o seu negócio. Por isso, operamos com uma estratégia logística inteligente para facilitar a sua coleta.
+            Encurtamos distâncias e eliminamos custos para que suas mercadorias cheguem mais rápido e com o melhor custo-benefício do Brasil. Para sua total conveniência, operamos com envios estratégicos partindo de Belém ou Fortaleza — você escolhe o ponto que melhor atende à sua logística.
           </p>
           
           <div className={styles.routeBox}>
@@ -38,45 +38,21 @@ export default function Logistics() {
 
           <div className={styles.infoNote}>
             <p>
-              <strong>Por que Fortaleza?</strong> Muitos clientes possuem transportadoras parceiras que operam a partir de Fortaleza. Para garantir que você não perca vendas por falta de frete, nós assumimos o trecho Belém ➔ Fortaleza sem custos adicionais.
+              <strong>Por que Fortaleza?</strong> Identificamos que a capital cearense é o principal hub logístico para centenas de transportadoras e o ponto de encontro de inúmeras excursões que atendem o Nordeste e outras regiões. Para que você aproveite suas parcerias e rotas já existentes, nós assumimos o transporte Belém ➔ Fortaleza por nossa conta. Assim, garantimos flexibilidade total: seu pedido pode ser despachado estrategicamente partindo de Belém ou disponibilizado em Fortaleza para entrega em sua transportadora ou excursão de preferência. É a Dadaou Baby garantindo que o seu estoque esteja sempre abastecido com agilidade e custo zero de transferência.
             </p>
           </div>
         </div>
 
-        <div className={styles.mapsContainer}>
-          <div className={styles.mapItem}>
-            <div className={styles.mapLabel}>CD Belém (PA)</div>
-            <div className={styles.mapBox}>
-              <Image 
-                src="/map_para.png" 
-                alt="Mapa Pará" 
-                width={200} 
-                height={200} 
-                className={styles.miniMap}
-              />
-              <div className={styles.ping}></div>
-            </div>
-          </div>
-
-          <div className={styles.connector}>
-            <svg viewBox="0 0 100 40" className={styles.arrowSvg}>
-              <path d="M0,20 L80,20 M70,10 L80,20 L70,30" fill="none" stroke="#FF8742" strokeWidth="3" />
-            </svg>
-            <span className={styles.freeLabel}>Frete por nossa conta</span>
-          </div>
-
-          <div className={styles.mapItem}>
-            <div className={styles.mapLabel}>Entrega Fortaleza (CE)</div>
-            <div className={styles.mapBox}>
-              <Image 
-                src="/map_ceara.png" 
-                alt="Mapa Ceará" 
-                width={200} 
-                height={200} 
-                className={styles.miniMap}
-              />
-              <div className={styles.ping}></div>
-            </div>
+        <div className={styles.visualWrapper}>
+          <div className={styles.imageCard}>
+            <Image 
+              src="/freteurso.png" 
+              alt="Logística Dadaou Baby - Frete Grátis Belém para Fortaleza" 
+              width={600} 
+              height={600} 
+              className={styles.freteImage}
+              priority
+            />
           </div>
         </div>
       </div>

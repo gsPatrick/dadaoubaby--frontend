@@ -40,7 +40,14 @@ export default function Footer() {
         </div>
 
         <div className={styles.bottom}>
-          <p>&copy; {new Date().getFullYear()} Dadaou Baby. Todos os direitos reservados. Marca Registrada.</p>
+          <div className={styles.copyright}>
+            <p>&copy; {new Date().getFullYear()} Dadaou Baby. Todos os direitos reservados. Marca Registrada.</p>
+          </div>
+          
+          <div className={styles.credits}>
+            Desenvolvido por <a href="http://codebypatrick.dev/" target="_blank" rel="noopener noreferrer" className={styles.devLink}>Patrick.Developer</a>
+          </div>
+
           <div className={styles.legal}>
             <Link href="#">Termos de Uso</Link>
             <Link href="#">Privacidade</Link>

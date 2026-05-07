@@ -96,6 +96,27 @@
   font-size: 0.85rem;
 }
 
+.credits {
+  font-weight: 500;
+  color: #777;
+}
+
+.devLink {
+  text-decoration: none;
+  font-family: var(--font-baloo);
+  font-weight: 700;
+  color: var(--primary-orange);
+  transition: all 0.3s ease;
+  padding: 2px 8px;
+  background: rgba(255, 135, 66, 0.05);
+  border-radius: 6px;
+}
+
+.devLink:hover {
+  background: var(--primary-orange);
+  color: white;
+}
+
 .legal {
   display: flex;
   gap: 20px;

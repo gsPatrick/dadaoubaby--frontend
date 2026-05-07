@@ -1,68 +1,29 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import styles from './MascotSection.module.css';
 
 export default function MascotSection() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const slides = [
-    {
-      label: "História",
-      title: "O Nascimento do Dadaou",
-      description: "Inspirado no primeiro abraço, o Dadaou nasceu para ser o melhor amigo de cada bebê, trazendo segurança e carinho desde os primeiros dias."
-    },
-    {
-      label: "Nossa Missão",
-      title: "Cuidado em Cada Detalhe",
-      description: "Cada peça de roupa passa pelo olhar carinhoso do nosso mascote, garantindo que o conforto seja a prioridade absoluta em nossa produção."
-    },
-    {
-      label: "Qualidade",
-      title: "Selo de Conforto Premium",
-      description: "O Dadaou representa a maciez dos nossos tecidos e o carinho das costuras, transformando o vestir em um momento de pura magia."
-    }
-  ];
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 6000);
-    return () => clearInterval(timer);
-  }, []);
-
   return (
     <section className={styles.mascotSection}>
       <div className={styles.container}>
-        {/* CARROSSEL DE TEXTO */}
+        {/* TEXTO DE APRESENTAÇÃO */}
         <div className={styles.content}>
-          <div className={styles.carouselWrapper}>
-            {slides.map((slide, index) => (
-              <div 
-                key={index} 
-                className={`${styles.slide} ${index === currentSlide ? styles.activeSlide : ''}`}
-                style={{ display: index === currentSlide ? 'block' : 'none' }}
-              >
-                <span className={styles.label}>{slide.label}</span>
-                <h2 className={styles.title}>{slide.title.split(' ')[0]} <span className={styles.highlight}>{slide.title.split(' ').slice(1).join(' ')}</span></h2>
-                <p className={styles.description}>{slide.description}</p>
-              </div>
-            ))}
-            
-            {/* Indicadores do Carrossel */}
-            <div className={styles.dots}>
-              {slides.map((_, index) => (
-                <button 
-                  key={index} 
-                  className={`${styles.dot} ${index === currentSlide ? styles.activeDot : ''}`}
-                  onClick={() => setCurrentSlide(index)}
-                />
-              ))}
-            </div>
+          <span className={styles.label}>O Coração da Marca</span>
+          <h2 className={styles.title}>
+            Conheça o Dadaou Bear: <span className={styles.highlight}>O Guardião da Nossa Qualidade</span>
+          </h2>
+          
+          <div className={styles.descriptionWrapper}>
+            <p className={styles.description}>
+              Muito mais do que um mascote, o <strong>Dadaou Bear</strong> é o símbolo do nosso compromisso com o enxoval perfeito. Ele nasceu para provar que sofisticação, design moderno e acabamento impecável podem (e devem) estar ao alcance de todas as famílias.
+            </p>
+            <p className={styles.description}>
+              Ele é o guardião da nossa <strong>'Qualidade Acessível'</strong>. Do primeiro lookinho aos acessórios indispensáveis para o dia a dia, se tem o sorriso do Dadaou Bear na peça, você tem a certeza de estar levando o melhor custo-benefício do Brasil para o seu bebê.
+            </p>
           </div>
         </div>
 
-        {/* VÍDEO ANIMADO (Com CSS controlado) */}
+        {/* VÍDEO ANIMADO */}
         <div className={styles.visual}>
           <div className={styles.imageBox}>
             <video 
