@@ -130,7 +130,7 @@
 
   .visualSpace {
     order: 1; /* Força o Vídeo a ser o PRIMEIRO no mobile */
-    height: 100vh;
+    height: 90vh;
     width: 100%;
   }
 

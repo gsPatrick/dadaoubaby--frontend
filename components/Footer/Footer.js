@@ -23,7 +23,7 @@ export default function Footer() {
           <div className={styles.links}>
             <h4>Navegação</h4>
             <Link href="#home">Início</Link>
-            <Link href="#historia">Nossa História</Link>
+            <Link href="#historia">Sobre Nós</Link>
             <Link href="#linhas">​Nossas Linhas</Link>
             <Link href="#logistica">Logística</Link>
           </div>

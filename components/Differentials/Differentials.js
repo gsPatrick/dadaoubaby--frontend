@@ -6,42 +6,43 @@ export default function Differentials() {
       title: "Qualidade Premium",
       text: "Materiais de alto padrão e acabamento rigoroso para garantir a durabilidade e a confiança que o seu cliente exige.",
       icon: (
-        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="50" cy="50" r="45" fill="#48B5AA" fillOpacity="0.1" />
-          <path d="M50 20L58.2 38.6L78 40.5L63 53.5L67.4 73L50 62.8L32.6 73L37 53.5L22 40.5L41.8 38.6L50 20Z" fill="#48B5AA" />
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          <path d="m9 12 2 2 4-4" />
         </svg>
-      )
+      ),
+      color: "#48B5AA"
     },
     {
       title: "Preço Justo",
-      text: "Materiais de alto padrão e acabamento rigoroso para garantir a durabilidade e a confiança que o seu cliente exige.",
+      text: "Trabalhamos com uma política de preços transparente, garantindo a melhor margem de lucro para o seu negócio crescer.",
       icon: (
-        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="50" cy="50" r="45" fill="#FFC021" fillOpacity="0.1" />
-          <path d="M40 30H60V35H40V30ZM40 45H60V50H40V45ZM40 60H60V65H40V60ZM30 20V80H70V20H30ZM65 75H35V25H65V75Z" fill="#FFC021" />
-          <circle cx="50" cy="50" r="15" stroke="#FFC021" strokeWidth="4" />
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
+          <line x1="7" y1="7" x2="7.01" y2="7" />
         </svg>
-      )
+      ),
+      color: "#FFC021"
     },
     {
       title: "Amor e Carinho",
-      text: "Cada peça é produzida com afeto e dedicação, mantendo a essência humana que faz da Dadaou uma marca amada pelas famílias.",
+      text: "Cada peça é produzida com afeto e dedicação, mantendo a essência humana que faz da Dadaou uma marca amada.",
       icon: (
-        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="50" cy="50" r="45" fill="#FF8742" fillOpacity="0.1" />
-          <path d="M50 75L45.5 70.9C29.4 56.3 18.8 46.7 18.8 34.9C18.8 25.3 26.3 17.8 35.9 17.8C41.3 17.8 46.5 20.3 50 24.3C53.5 20.3 58.7 17.8 64.1 17.8C73.7 17.8 81.2 25.3 81.2 34.9C81.2 46.7 70.6 56.3 54.5 70.9L50 75Z" fill="#FF8742" />
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
         </svg>
-      )
+      ),
+      color: "#FF8742"
     },
     {
       title: "Logística Ágil",
       text: "Envio rápido e seguro para garantir que sua loja esteja sempre abastecida com o que há de melhor no mercado.",
       icon: (
-        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="50" cy="50" r="45" fill="#48B5AA" fillOpacity="0.1" />
-          <path d="M20 50H40M30 30L45 50L30 70M60 50L80 50" stroke="#48B5AA" strokeWidth="5" strokeLinecap="round" />
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
         </svg>
-      )
+      ),
+      color: "#48B5AA"
     }
   ];
 
@@ -51,7 +52,9 @@ export default function Differentials() {
         <div className={styles.grid}>
           {items.map((item, index) => (
             <div key={index} className={styles.card}>
-              <div className={styles.iconBox}>{item.icon}</div>
+              <div className={styles.iconWrapper} style={{ '--brand-color': item.color }}>
+                <div className={styles.iconBox}>{item.icon}</div>
+              </div>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
             </div>
