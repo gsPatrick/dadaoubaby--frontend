@@ -33,7 +33,7 @@ export default function Footer() {
             <p>Belém - PA | Fortaleza - CE</p>
             <a href="mailto:contato@dadoubaby.com.br">contato@dadoubaby.com.br</a>
             <div className={styles.social}>
-              <a href="#" className={styles.socialIcon}>Instagram</a>
+              <a href="https://www.instagram.com/dadaoubaby" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>Instagram</a>
               <a href="#" className={styles.socialIcon}>WhatsApp</a>
             </div>
           </div>

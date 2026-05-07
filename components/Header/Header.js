@@ -22,7 +22,7 @@ export default function Header() {
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.container}>
-        <Link href="/" className={styles.logo}>
+        <Link href="/" className={`${styles.logo} ${scrolled ? styles.logoVisible : styles.logoHidden}`}>
           <Image 
             src="/logo/logotexto.png" 
             alt="Dadaou Baby" 
