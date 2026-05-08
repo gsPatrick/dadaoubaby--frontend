@@ -24,17 +24,17 @@ export default function Footer() {
             <h4>Navegação</h4>
             <Link href="#home">Início</Link>
             <Link href="#historia">Sobre Nós</Link>
-            <Link href="#linhas">​Nossas Linhas</Link>
+            <Link href="#linhas">Nossos produtos</Link>
             <Link href="#logistica">Logística</Link>
           </div>
 
           <div className={styles.contact}>
             <h4>Contato</h4>
-            <p>Belém - PA | Fortaleza - CE</p>
+            <p>Belém - PA</p>
             <a href="mailto:contato@dadoubaby.com.br">contato@dadoubaby.com.br</a>
             <div className={styles.social}>
               <a href="https://www.instagram.com/dadaoubaby" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>Instagram</a>
-              <a href="#" className={styles.socialIcon}>WhatsApp</a>
+              <a href="https://wa.me/5591993057070" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>WhatsApp</a>
             </div>
           </div>
         </div>

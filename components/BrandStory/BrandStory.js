@@ -85,7 +85,7 @@ export default function BrandStory() {
             </div>
           </div>
           
-          <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" className={styles.button}>Seja um Revendedor Agora</a>
+          <a href="https://wa.me/5591993057070" target="_blank" rel="noopener noreferrer" className={styles.button}>Seja um Revendedor Agora</a>
         </div>
       </div>
     </section>

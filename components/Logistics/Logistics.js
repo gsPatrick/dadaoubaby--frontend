@@ -9,7 +9,7 @@ export default function Logistics() {
           <span className={styles.label}>Vantagem Logística B2B</span>
           <h2 className={styles.title}>De Belém para o <span className={styles.highlight}>Brasil</span></h2>
           <p className={styles.text}>
-            Encurtamos distâncias e eliminamos custos para que suas mercadorias cheguem mais rápido e com o melhor custo-benefício do Brasil. Para sua total conveniência, operamos com envios estratégicos partindo de Belém ou Fortaleza — você escolhe o ponto que melhor atende à sua logística.
+           Encurtamos distâncias e eliminamos custos para que suas mercadorias cheguem mais rápido e com o melhor custo-benefício do Brasil. Com envios estratégicos partindo de Belém ou Fortaleza, você escolhe o ponto ideal para sua logística. E não importa onde você esteja: nossa equipe busca ativamente a melhor e mais barata opção de frete para atender a sua região.
           </p>
           
           <div className={styles.routeBox}>

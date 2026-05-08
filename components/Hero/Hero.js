@@ -77,7 +77,7 @@ export default function Hero() {
             Do primeiro lookinho aos acessórios essenciais: Tudo o que o seu bebê precisa em um só lugar. Qualidade premium para os pequenos exploradores.
           </p>
           <div className={styles.actions}>
-            <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" className={styles.primaryBtn}>
+            <a href="https://wa.me/5591993057070" target="_blank" rel="noopener noreferrer" className={styles.primaryBtn}>
               Quero ser Revendedor
             </a>
           </div>

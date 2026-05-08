@@ -1,7 +1,7 @@
 import styles from './WhatsAppFloating.module.css';
 
 export default function WhatsAppFloating() {
-  const whatsappNumber = "5511999999999"; // Substituir pelo número real
+  const whatsappNumber = "5591993057070"; // Oficial Dadaou Baby
   const message = "Olá! Gostaria de saber mais sobre como ser um revendedor Dadaou Baby.";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 

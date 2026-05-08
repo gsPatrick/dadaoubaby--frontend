@@ -43,7 +43,7 @@ export default function Header() {
 
         {/* Mobile Toggle */}
         <div className={styles.mobileActions}>
-          <a href="https://wa.me/5511999999999" className={styles.mobileCta}>WhatsApp</a>
+          <a href="https://wa.me/5591993057070" target="_blank" rel="noopener noreferrer" className={styles.mobileCta}>WhatsApp</a>
           <button className={`${styles.hamburger} ${menuOpen ? styles.open : ''}`} onClick={toggleMenu} aria-label="Menu">
             <span></span>
             <span></span>
@@ -56,7 +56,7 @@ export default function Header() {
       <div className={`${styles.menuOverlay} ${menuOpen ? styles.menuVisible : ''}`}>
         <nav className={styles.mobileNav}>
           <Link href="#home" onClick={toggleMenu}>Início</Link>
-          <Link href="#historia" onClick={toggleMenu}>sobre Nós</Link>
+          <Link href="#historia" onClick={toggleMenu}>Sobre nós</Link>
           <Link href="#linhas" onClick={toggleMenu}>Linhas de Negócio</Link>
           <Link href="#logistica" onClick={toggleMenu}>Logística</Link>
           <Link href="#contato" className={styles.mobileMenuCta} onClick={toggleMenu}>Seja um Revendedor</Link>

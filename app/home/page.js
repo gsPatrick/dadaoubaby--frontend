@@ -21,7 +21,7 @@ export default function HomePage() {
       <BusinessLines />
       <MascotSection />
       <Logistics />
-      <PartnerJourney />
+      {/* <PartnerJourney /> */}
       <CTA />
       
       <footer className={styles.footer}>
