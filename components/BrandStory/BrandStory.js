@@ -70,20 +70,7 @@ export default function BrandStory() {
            A Dadaou Baby nasceu de um propósito claro: transformar o mercado de enxoval infantil, unindo o que há de melhor em design e conforto à realidade das famílias brasileiras. Na Dadaou Baby, acreditamos que todo bebê merece o melhor, sem que isso custe uma fortuna. Unimos materiais de alta qualidade a um preço justo porque entendemos que o cuidado real é aquele que protege o pequeno e respeita o orçamento da família. Do tecido da roupinha ao acabamento dos acessórios, tudo é pensado para entregar o máximo de carinho com a melhor economia do mercado.
           </p>
           
-          <div className={styles.stats}>
-            <div className={styles.statItem}>
-              <h3><Counter end={2004} duration={2500} /></h3>
-              <p>O Início</p>
-            </div>
-            <div className={styles.statItem}>
-              <h3><Counter end={500} suffix="k+" duration={2000} /></h3>
-              <p>Bebês Felizes</p>
-            </div>
-            <div className={styles.statItem}>
-              <h3><Counter end={100} suffix="%" duration={1500} /></h3>
-              <p>Confiança</p>
-            </div>
-          </div>
+
           
           <a href="https://wa.me/5591993057070" target="_blank" rel="noopener noreferrer" className={styles.button}>Seja um Revendedor Agora</a>
         </div>

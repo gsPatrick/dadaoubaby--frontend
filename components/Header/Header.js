@@ -38,6 +38,7 @@ export default function Header() {
           <Link href="#home">Início</Link>
           <Link href="#historia">Sobre Nós</Link>
           <Link href="#linhas">Nossas Linhas</Link>
+          <Link href="#logistica">Logística</Link>
           <Link href="#contato" className={styles.cta}>Seja um Revendedor</Link>
         </nav>
 
@@ -57,7 +58,7 @@ export default function Header() {
         <nav className={styles.mobileNav}>
           <Link href="#home" onClick={toggleMenu}>Início</Link>
           <Link href="#historia" onClick={toggleMenu}>Sobre nós</Link>
-          <Link href="#linhas" onClick={toggleMenu}>Linhas de Negócio</Link>
+          <Link href="#linhas" onClick={toggleMenu}>Linhas de produtos</Link>
           <Link href="#logistica" onClick={toggleMenu}>Logística</Link>
           <Link href="#contato" className={styles.mobileMenuCta} onClick={toggleMenu}>Seja um Revendedor</Link>
         </nav>

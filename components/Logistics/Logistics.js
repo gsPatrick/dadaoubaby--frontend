@@ -3,7 +3,7 @@ import styles from './Logistics.module.css';
 
 export default function Logistics() {
   return (
-    <section className={styles.logistics}>
+    <section className={styles.logistics} id="logistica">
       <div className={styles.container}>
         <div className={styles.content}>
           <span className={styles.label}>Vantagem Logística B2B</span>
